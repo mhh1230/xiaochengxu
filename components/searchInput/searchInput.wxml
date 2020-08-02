@@ -1,0 +1,5 @@
+<view class="search_input">
+    <navigator class="" url="../../pages/search/index" open-type="navigate">
+        请输入搜索词
+    </navigator>
+</view>

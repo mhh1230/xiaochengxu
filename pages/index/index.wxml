@@ -1,0 +1,44 @@
+<view class="pinyougou_index">
+  <!-- 搜索框 -->
+  <searchInput></searchInput>
+  <!-- 轮播图 -->
+  <view class="swiper_index">
+    <swiper autoplay indicator-dots circular interval="2000">
+      <swiper-item wx:for="{{swiperList}}" wx:key="goods_id">
+        <navigator url="/pages/goods_detail/index?goods_id={{item.goods_id}}">
+          <image mode="widthFix" src="{{item.image_src}}"></image>
+        </navigator>
+      </swiper-item>
+    </swiper>
+  </view>
+  <!-- 分类导航 -->
+  <view class="category_index">
+    <navigator wx:for="{{cateList}}" wx:key="name" url="/pages/category/index" open-type="switchTab">
+      <image mode="widthFix" src="{{item.image_src}}"></image>
+    </navigator>
+  </view>
+  <!-- 楼层产品展示数据 -->
+  <view wx:for="{{productshow}}" wx:for-item="item1" wx:for-index="index1" wx:key="floor_title"
+    class="index_productshow">
+    <view class="proshow_index">
+      <!-- 标题 -->
+      <view class="proshow_title">
+        <image mode="widthFix" src="{{item1.floor_title.image_src}}"></image>
+      </view>
+      <!-- 内容 -->
+      <view class="product_content">
+        <navigator wx:for="{{item1.product_list}}" wx:for-item="item2" wx:for-index="index2" wx:key="name"
+          open-type="navigate" url="{{item2.navigator_url}}">
+          <image mode="{{index2===0?'widthFix':'scaleFill'}}" src="{{item2.image_src}}"></image>
+        </navigator>
+
+      </view>
+
+
+    </view>
+  </view>
+
+
+
+
+</view>

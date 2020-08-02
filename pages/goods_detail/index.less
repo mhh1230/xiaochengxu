@@ -1,0 +1,122 @@
+page {
+    padding-bottom: 90rpx;
+}
+
+.detail_swiper {
+    swiper {
+        height: 60vw;
+        background-color: #ccc;
+        text-align: center;
+
+        swiper-item {
+            image {
+                width: 60%;
+            }
+        }
+    }
+}
+
+// 价格部分
+.price {
+    color: var(--fontColor);
+    font-size: 35rpx;
+    padding: 15rpx 10rpx;
+    font-weight: 600;
+}
+
+.goods_name_row {
+    display: flex;
+    border-bottom: 5rpx solid #dedede;
+    border-top: 5rpx solid #dedede;
+    padding: 10rpx 0;
+
+    .goods_name {
+        flex: 5;
+        padding: 0 10rpx;
+        border-right: rgb(163, 161, 161) solid 1px;
+
+        display: -webkit-box;
+        overflow: hidden;
+        -webkit-box-orient: vertical;
+        -webkit-line-clamp: 2;
+
+    }
+
+    .goods_collect {
+        flex: 1;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+}
+
+.goods_info {
+    .goods_info_title {
+        font-size: 32rpx;
+        color: var(--fontColor);
+        font-weight: 600;
+        padding: 20rpx;
+    }
+
+    .goods_info_content {}
+}
+
+//底部固定区域
+.btm_tool {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 90rpx;
+    display: flex;
+    border-top: 1px solid #ccc;
+    background-color: #fff;
+
+    .tool_item {
+
+        flex: 2;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        font-size: 25rpx;
+        position: relative;
+
+        .iconfont {}
+
+        button {
+            bottom: 0;
+            left: 0;
+            opacity: 0;
+            position: absolute;
+            width: 100%;
+            height: 100%;
+        }
+    }
+
+    .btn_cart {
+        flex: 3;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background-color: #ffa500;
+        color: #fff;
+        font-size: 25rpx;
+        font-weight: 600;
+    }
+
+    .btn_buy {
+        flex: 3;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background-color: #eb4450;
+        color: #fff;
+        font-size: 25rpx;
+        font-weight: 600;
+    }
+
+}
