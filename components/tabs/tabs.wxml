@@ -5,7 +5,6 @@
             {{item.value}}
         </view>
     </view>
-
     <view class="tabs_content">
         <slot></slot>
     </view>
